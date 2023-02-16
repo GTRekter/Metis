@@ -10,10 +10,10 @@ REACT_APP_AZURE_CS_SPEECH_REGION=""
 
 ## Screenshots
 ### Homepage
-![alt text](./preview/homepage.jpg?raw=true)
+![alt text](./preview/homepage.png?raw=true)
 ### Flashcards
-![alt text](./preview/flashcards.jpg?raw=true)
+![alt text](./preview/flashcards.png?raw=true)
 ### Dictionary
-![alt text](./preview/dictionary.jpg?raw=true)
+![alt text](./preview/dictionary.png?raw=true)
 ### Pronunciation
-![alt text](./preview/pronunciation.jpg?raw=true)
+![alt text](./preview/pronunciation.png?raw=true)
