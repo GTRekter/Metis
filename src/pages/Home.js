@@ -31,26 +31,9 @@ export default class Home extends Component {
     }
     onClickConfirmImport = () => {  
         WordService.importFile(this.state.fileToImport);
-    }
-    OnClickDownloadImportTemplate = () => {
-        WordService
-            .downloadImportTemplate()
-            .then(async (response) => {
-                response.text().then(text => {
-                    const blob = new Blob([text]);
-                    if (window.navigator.msSaveOrOpenBlob) {
-                        window.navigator.msSaveBlob(blob, "template.csv");
-                    }
-                    else {
-                        var a = window.document.createElement("a");
-                        a.href = window.URL.createObjectURL(blob, { type: "text/plain" });
-                        a.download = "template.csv";
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                    }
-                });
-            })
+        this.setState({
+            importModalVisible: false
+        })
     }
     onChangeFileToImport = (event) => {
         this.setState({
