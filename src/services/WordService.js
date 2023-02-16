@@ -71,31 +71,48 @@ class WordService {
     }
     getLanguages() {
         let data = localStorage.getItem('languages');
+        if(data == undefined) {
+            return [];
+        }
         return JSON.parse(data);
     }
     getAllWords() {
         let data = localStorage.getItem('words');
+        if(data == undefined) {
+            return[];
+        }
         return JSON.parse(data);
     }
     getWordsCount() {
         let data = localStorage.getItem('words');
+        if(data == undefined) {
+            return 0;
+        }
         let dataJson = JSON.parse(data);
         return dataJson.length;
     }
     getWordsByPage(page, wordsPerPage) {
         let data = localStorage.getItem('words');
+        if(data == undefined) {
+            return [];
+        }
         let dataJson = JSON.parse(data);
         let dataToReturn = dataJson.slice(page * wordsPerPage, page * wordsPerPage + wordsPerPage);
         return (dataToReturn);
     }
     getAllWordTypes() {
         let data = localStorage.getItem('wordtypes');
+        if(data == undefined) {
+            return [];
+        }
         return JSON.parse(data);
     }
     getWordsByPageAndSearchQuery(page, wordsPerPage, searchQuery) {
         let data = localStorage.getItem('words');
+        if(data == undefined) {
+            return []
+        }
         let dataJson = JSON.parse(data);
-
         let resultJson = [];
         for (let index = 0; index < dataJson.length; index++) {
             if (dataJson[index].text.indexOf(searchQuery) > -1 
@@ -115,8 +132,10 @@ class WordService {
     }
     getWordsCountBySearchQuery(searchQuery) {
         let data = localStorage.getItem('words');
+        if(data == undefined) {
+            return 0;
+        }
         let dataJson = JSON.parse(data);
-
         let resultJson = [];
         for (let index = 0; index < dataJson.length; index++) {
             if (dataJson[index].text.indexOf(searchQuery) > -1 
@@ -135,8 +154,10 @@ class WordService {
     }
     getAllWordsByWordType(wordType) {
         let data = localStorage.getItem('words');
+        if(data == undefined) {
+            return [];
+        }
         let dataJson = JSON.parse(data);
-
         let resultJson = [];
         for (let index = 0; index < dataJson.length; index++) {
             if (dataJson[index].wordtype === wordType) {
