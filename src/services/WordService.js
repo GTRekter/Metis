@@ -40,7 +40,8 @@ class WordService {
                         obj[headers[j].trim()] = data[j].trim();
                     } else {
                         translation.push({
-                            text: data[j].trim()
+                            text: data[j].trim(),
+                            language: headers[j].trim()
                         });
                     }     
                 }

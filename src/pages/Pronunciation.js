@@ -95,8 +95,9 @@ export default class Pronunciation extends Component {
         this.setState({
             isPlaying: true
         });
-        var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
-        SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        // var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
+        // SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        SpeechService.synthesizeSpeech(this.state.currentWord.text, this.state.currentWord.language);
         setTimeout(function () {
             self.setState({
                 isPlaying: false
@@ -107,8 +108,9 @@ export default class Pronunciation extends Component {
         if(this.state.isRecordingMicrophone) {
             SpeechService.stopAssessSpeech();
         } else {
-            var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
-            SpeechService.startAssessSpeech(this.state.currentWord.text, language[0].code, this.onRecognizing, this.onRecognized);
+            // var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
+            // SpeechService.startAssessSpeech(this.state.currentWord.text, language[0].code, this.onRecognizing, this.onRecognized);
+            SpeechService.startAssessSpeech(this.state.currentWord.text, this.state.currentWord.language, this.onRecognizing, this.onRecognized);
         }
         this.setState({
             isRecordingMicrophone: !this.state.isRecordingMicrophone

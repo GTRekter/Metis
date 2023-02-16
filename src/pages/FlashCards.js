@@ -56,8 +56,9 @@ export default class FlashCards extends Component {
             isPlaying: true,
             viewTranslation: true
         });
-        var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
-        SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        // var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
+        // SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        SpeechService.synthesizeSpeech(this.state.currentWord.text, this.state.currentWord.language);
         setTimeout(function () {
             self.setState({
                 isPlaying: false
@@ -74,8 +75,9 @@ export default class FlashCards extends Component {
             isAnswerProvided: true,
             isAnswerCorrect: false
         })
-        var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
-        SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        // var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
+        // SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        SpeechService.synthesizeSpeech(this.state.currentWord.text, this.state.currentWord.language);
         setTimeout(function () {
             self.updateCounters();
         }, 2000);
@@ -90,8 +92,9 @@ export default class FlashCards extends Component {
             isAnswerProvided: true,
             isAnswerCorrect: true
         })
-        var language = this.state.languages.filter(d => d.id === this.state.currentWord.languageId);
-        SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        // var language = this.state.languages.filter(d => d.id === this.state.currentWord.language);
+        // SpeechService.synthesizeSpeech(this.state.currentWord.text, language[0].code);
+        SpeechService.synthesizeSpeech(this.state.currentWord.text, this.state.currentWord.language);
         setTimeout(function () {
             self.updateCounters();
         }, 2000);
