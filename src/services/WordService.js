@@ -71,21 +71,21 @@ class WordService {
     }
     getLanguages() {
         let data = localStorage.getItem('languages');
-        if(data == undefined) {
+        if(data === null) {
             return [];
         }
         return JSON.parse(data);
     }
     getAllWords() {
         let data = localStorage.getItem('words');
-        if(data == undefined) {
-            return[];
+        if(data === null) {
+            return [];
         }
         return JSON.parse(data);
     }
     getWordsCount() {
         let data = localStorage.getItem('words');
-        if(data == undefined) {
+        if(data === null) {
             return 0;
         }
         let dataJson = JSON.parse(data);
@@ -93,7 +93,7 @@ class WordService {
     }
     getWordsByPage(page, wordsPerPage) {
         let data = localStorage.getItem('words');
-        if(data == undefined) {
+        if(data === null) {
             return [];
         }
         let dataJson = JSON.parse(data);
@@ -102,14 +102,14 @@ class WordService {
     }
     getAllWordTypes() {
         let data = localStorage.getItem('wordtypes');
-        if(data == undefined) {
+        if(data === null) {
             return [];
         }
         return JSON.parse(data);
     }
     getWordsByPageAndSearchQuery(page, wordsPerPage, searchQuery) {
         let data = localStorage.getItem('words');
-        if(data == undefined) {
+        if(data === null) {
             return []
         }
         let dataJson = JSON.parse(data);
@@ -132,7 +132,7 @@ class WordService {
     }
     getWordsCountBySearchQuery(searchQuery) {
         let data = localStorage.getItem('words');
-        if(data == undefined) {
+        if(data === null) {
             return 0;
         }
         let dataJson = JSON.parse(data);
@@ -154,7 +154,7 @@ class WordService {
     }
     getAllWordsByWordType(wordType) {
         let data = localStorage.getItem('words');
-        if(data == undefined) {
+        if(data === null) {
             return [];
         }
         let dataJson = JSON.parse(data);
