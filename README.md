@@ -8,7 +8,7 @@ REACT_APP_AZURE_CS_SPEECH_KEY=""
 REACT_APP_AZURE_CS_SPEECH_REGION=""
 ```
 
-*𝐋𝐢𝐯𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧:* ![𝐋𝐢𝐯𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧](https://orange-field-067ae0b00-5.eastasia.2.azurestaticapps.net/)
+*𝐋𝐢𝐯𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧:* https://orange-field-067ae0b00-5.eastasia.2.azurestaticapps.net/
 
 ## Screenshots
 ### Homepage
