@@ -4,9 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faSpellCheck, faLayerGroup, faComments } from '@fortawesome/free-solid-svg-icons'
 
 export default class Sidebar extends Component {
-    constructor(props) {
-        super(props)
-    }
     render() {
         return (
             <aside className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">

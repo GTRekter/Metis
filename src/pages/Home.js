@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import korea from '../images/korea.png';
-import { Collapse, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import WordService from '../services/WordService';
 import Template from '../assets/static/template.csv';
 
@@ -15,7 +15,6 @@ export default class Home extends Component {
         this.onClickHideImportModal = this.onClickHideImportModal.bind(this);
         this.onChangeFileToImport = this.onChangeFileToImport.bind(this);
         this.onClickConfirmImport = this.onClickConfirmImport.bind(this);
-        this.OnClickDownloadImportTemplate = this.OnClickDownloadImportTemplate.bind(this);
     }
     componentDidMount() {
     }
@@ -31,26 +30,9 @@ export default class Home extends Component {
     }
     onClickConfirmImport = () => {  
         WordService.importFile(this.state.fileToImport);
-    }
-    OnClickDownloadImportTemplate = () => {
-        WordService
-            .downloadImportTemplate()
-            .then(async (response) => {
-                response.text().then(text => {
-                    const blob = new Blob([text]);
-                    if (window.navigator.msSaveOrOpenBlob) {
-                        window.navigator.msSaveBlob(blob, "template.csv");
-                    }
-                    else {
-                        var a = window.document.createElement("a");
-                        a.href = window.URL.createObjectURL(blob, { type: "text/plain" });
-                        a.download = "template.csv";
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                    }
-                });
-            })
+        this.setState({
+            importModalVisible: false
+        })
     }
     onChangeFileToImport = (event) => {
         this.setState({
@@ -81,7 +63,7 @@ export default class Home extends Component {
                     <div className="modal-content">
                         <div className="modal-body">
                             <div className="col-12 col-md-6">
-                                <a href={Template} download target='_blank' className="btn btn-primary">Donwload template</a>
+                                <a href={Template} download className="btn btn-primary">Donwload template</a>
                                 <div className="input-group input-group-outline my-3">
                                     <label>File</label>
                                     <input type="file" className="form-control" name="fileToImport" accept=".csv" onChange={this.onChangeFileToImport} />

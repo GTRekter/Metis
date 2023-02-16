@@ -7,3 +7,13 @@ In order to use Azure Cognitive Services you will need to create a `.env` file w
 REACT_APP_AZURE_CS_SPEECH_KEY=""
 REACT_APP_AZURE_CS_SPEECH_REGION=""
 ```
+
+## Screenshots
+### Homepage
+![alt text](./preview/homepage.png?raw=true)
+### Flashcards
+![alt text](./preview/flashcards.png?raw=true)
+### Dictionary
+![alt text](./preview/dictionary.png?raw=true)
+### Pronunciation
+![alt text](./preview/pronunciation.png?raw=true)
