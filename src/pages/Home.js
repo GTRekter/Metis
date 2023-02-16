@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import korea from '../images/korea.png';
-import { Collapse, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import WordService from '../services/WordService';
 import Template from '../assets/static/template.csv';
 
@@ -81,7 +81,7 @@ export default class Home extends Component {
                     <div className="modal-content">
                         <div className="modal-body">
                             <div className="col-12 col-md-6">
-                                <a href={Template} download target='_blank' className="btn btn-primary">Donwload template</a>
+                                <a href={Template} download className="btn btn-primary">Donwload template</a>
                                 <div className="input-group input-group-outline my-3">
                                     <label>File</label>
                                     <input type="file" className="form-control" name="fileToImport" accept=".csv" onChange={this.onChangeFileToImport} />

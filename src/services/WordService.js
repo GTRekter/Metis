@@ -26,7 +26,7 @@ class WordService {
             // Set words
             let words = [];
             for(let i = 1; i < rows.length; i++) {
-                if(rows[i] == "") {
+                if(rows[i] === "") {
                     break;
                 }
                 let data = rows[i].split(',');
@@ -146,4 +146,5 @@ class WordService {
         return (resultJson);
     }
 }
-export default new WordService();
+let service = new WordService()
+export default service;

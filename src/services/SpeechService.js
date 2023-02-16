@@ -98,4 +98,5 @@ class SpeechService {
         this.recognizer.stopContinuousRecognitionAsync();
     };
 }
-export default new SpeechService();
+let service = new SpeechService()
+export default service;
