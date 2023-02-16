@@ -34,9 +34,10 @@ export default class Dictionary extends Component {
             pages: Math.floor(wordsCount / this.state.wordsPerPage) + 1
         });
     }
-    onClickPronounceWords = (string, languageId) => {
-        var language = this.state.languages.filter(d => d.id === languageId);
-        SpeechService.synthesizeSpeech(string, language[0].code);
+    onClickPronounceWords = (string, language) => {
+        // var language = this.state.languages.filter(d => d.code === language);
+        // SpeechService.synthesizeSpeech(string, language[0].code);
+        SpeechService.synthesizeSpeech(string, language);
     }
     onClickUpdateWordsByPage = (wordsPerPage) => {
         if (this.state.searchQuery === '') {
@@ -128,7 +129,7 @@ export default class Dictionary extends Component {
         let rows = this.state.displayedWords.map((word, index) => {
             let columns = [];
             this.state.languages.forEach((language, index) => {
-                let translation = word.translations.filter((translation) => translation.languageId === language.id);
+                let translation = word.translations.filter((translation) => translation.language === language.code);
                 if (translation.length > 0) {
                     columns.push(<td key={index} className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-4">{translation[0].text}</td>)
                 } else {
@@ -138,7 +139,7 @@ export default class Dictionary extends Component {
             return (
                 <tr key={index}>
                     <td className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 td-icon">
-                        <button className="btn btn-sm btn-link-secondary" onClick={() => this.onClickPronounceWords(word.text, word.languageId)}>
+                        <button className="btn btn-sm btn-link-secondary" onClick={() => this.onClickPronounceWords(word.text, word.language)}>
                             <FontAwesomeIcon icon={faVolumeUp} />
                         </button>
                     </td>
