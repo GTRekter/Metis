@@ -1,10 +1,5 @@
 name: Azure Static Web App
-on:
-  push:
-    paths:
-      - 'Metis.Web/**'
-    branches:
-      - main    
+on:  
   workflow_dispatch:
   pull_request:
     types: [opened, synchronize, reopened, closed]
