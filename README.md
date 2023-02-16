@@ -8,12 +8,14 @@ REACT_APP_AZURE_CS_SPEECH_KEY=""
 REACT_APP_AZURE_CS_SPEECH_REGION=""
 ```
 
+*𝐋𝐢𝐯𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧:* ![𝐋𝐢𝐯𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧](https://orange-field-067ae0b00-5.eastasia.2.azurestaticapps.net/)
+
 ## Screenshots
 ### Homepage
-![alt text](./preview/homepage.png?raw=true)
+![Homepage](./preview/homepage.png?raw=true)
 ### Flashcards
-![alt text](./preview/flashcards.png?raw=true)
+![Flashcards](./preview/flashcards.png?raw=true)
 ### Dictionary
-![alt text](./preview/dictionary.png?raw=true)
+![Dictionary](./preview/dictionary.png?raw=true)
 ### Pronunciation
-![alt text](./preview/pronunciation.png?raw=true)
+![Pronunciation](./preview/pronunciation.png?raw=true)
