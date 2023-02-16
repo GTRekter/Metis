@@ -15,7 +15,6 @@ export default class Home extends Component {
         this.onClickHideImportModal = this.onClickHideImportModal.bind(this);
         this.onChangeFileToImport = this.onChangeFileToImport.bind(this);
         this.onClickConfirmImport = this.onClickConfirmImport.bind(this);
-        this.OnClickDownloadImportTemplate = this.OnClickDownloadImportTemplate.bind(this);
     }
     componentDidMount() {
     }
