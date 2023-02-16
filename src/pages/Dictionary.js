@@ -129,7 +129,7 @@ export default class Dictionary extends Component {
         let rows = this.state.displayedWords.map((word, index) => {
             let columns = [];
             this.state.languages.forEach((language, index) => {
-                let translation = word.translations.filter((translation) => translation.language === language.code);
+                let translation = word.translations.filter((translation) => translation.language.toLowerCase() === language.code.toLowerCase());
                 if (translation.length > 0) {
                     columns.push(<td key={index} className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-4">{translation[0].text}</td>)
                 } else {
