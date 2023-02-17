@@ -21,7 +21,7 @@ AZURE_STORAGE_ACCOUNT_CONTAINER_KEY=""
 AZURE_STORAGE_ACCOUNT_CONTAINER_TOKEN=""
 ```
 
-*Live Application:* https://orange-field-067ae0b00-5.eastasia.2.azurestaticapps.net/
+*Live Application:* https://orange-field-067ae0b00.2.azurestaticapps.net/
 
 ## Screenshots
 ### Homepage
