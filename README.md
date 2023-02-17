@@ -7,8 +7,20 @@ In order to use Azure Cognitive Services you will need to create a `.env` file w
 REACT_APP_AZURE_CS_SPEECH_KEY=""
 REACT_APP_AZURE_CS_SPEECH_REGION=""
 ```
+## Actions configuration
+To use the Github actions, you will need to configure the following secrets:
+```
+AZURE_CLIENT_ID=""
+AZURE_CLIENT_SECRET=""
+AZURE_TENANT_ID=""
+AZURE_SUBSCRIPTION_ID=""
+AZURE_STORAGE_ACCOUNT_NAME=""
+AZURE_STORAGE_ACCOUNT_CONTAINER_NAME=""
+AZURE_STORAGE_ACCOUNT_CONTAINER_KEY=""
+AZURE_STORAGE_ACCOUNT_CONTAINER_TOKEN=""
+```
 
-*𝐋𝐢𝐯𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧:* https://orange-field-067ae0b00-5.eastasia.2.azurestaticapps.net/
+*Live Application:* https://orange-field-067ae0b00-5.eastasia.2.azurestaticapps.net/
 
 ## Screenshots
 ### Homepage
